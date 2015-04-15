@@ -1,0 +1,11 @@
+Some useful commands for setting up and running contacts-sync.
+
+**Setup**
+This example shows how to perform the first-run setups.  It uses the accounts set up in the sample ~/.google/config file.
+This example keeps private (does not sync) group "rockstars" and group "bandmates".
+contacts-sync.py --user=elvis --private=rockstars --addingnewaccount
+contacts-sync.py --user=jim --private=bandmates --addingnewaccount
+
+**continuous usage**
+run every x hours (as a cron job, for example):
+contacts-sync.py --user=elvis --user=jim --private=rockstars --private=bandmates >> ~/contactsync/cs.log 2>&1
